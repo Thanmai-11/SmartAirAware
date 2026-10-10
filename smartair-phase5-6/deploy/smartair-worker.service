@@ -1,0 +1,17 @@
+[Unit]
+Description=SmartAirAware worker (hourly pipeline)
+After=network.target
+
+[Service]
+User=smartair
+Group=smartair
+WorkingDirectory=/opt/smartair
+EnvironmentFile=/opt/smartair/.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/smartair/.venv/bin/python -m worker.main
+Restart=always
+RestartSec=5
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

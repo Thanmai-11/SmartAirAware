@@ -152,9 +152,7 @@ def run_pipeline(existing_run_id: Optional[str] = None) -> str:
         check_timeout()
 
         # 6. Simulate 4 uniform modes
-        sim_timeout_s = int(os.getenv("SIM_TIMEOUT_S", "300"))
-        run_all_modes(run_folder, out_epw, timeout_s=sim_timeout_s)
-
+        run_all_modes(run_folder, out_epw)
         mode_table = {}
         for m_name in MODES.keys():
             sql_path = os.path.join(run_folder, m_name, "eplusout.sql")

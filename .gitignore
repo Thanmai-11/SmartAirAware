@@ -7,6 +7,7 @@ phasebyphase.txt
 
 # ── Python runtime ────────────────────────────────────────────────────────────
 venv/
+.venv/
 __pycache__/
 *.py[cod]
 *.pyo

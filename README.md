@@ -213,11 +213,17 @@ Admin endpoints require the `X-Admin-Key` header set to the value of `ADMIN_KEY`
 
 ---
 ## Screenshots
-![Dashboard KPIs and mode timeline](docs/screenshots/1.png)
-![Forecast and schedule](docs/screenshots/2.png)
-![Hourly schedule](docs/screenshots/3.png)
-![Optimizer settings](docs/screenshots/4.png)
-![Occupancy profile](docs/screenshots/5.png)
+![Dashboard KPIs and mode timeline]<img width="1253" height="623" alt="1" src="https://github.com/user-attachments/assets/6887f989-a06d-4ff0-9b0e-6d0cb0fb8f64" />
+
+![Forecast and schedule]<img width="1253" height="623" alt="2" src="https://github.com/user-attachments/assets/1ec035d1-5c15-4c47-a60e-2a3d21fa2174" />
+
+![Hourly schedule]<img width="1253" height="623" alt="3" src="https://github.com/user-attachments/assets/afa927be-9d0c-4158-82f7-34594337fed8" />
+
+![Optimizer settings]<img width="1253" height="623" alt="4" src="https://github.com/user-attachments/assets/df2e8e27-05b8-427b-af7d-5f51287b8f91" />
+
+![Occupancy profile]<img width="1253" height="623" alt="5" src="https://github.com/user-attachments/assets/b3963fec-4b65-47d1-8a3d-a275eaab504c" />
+
+
 
 ## Data sources
 

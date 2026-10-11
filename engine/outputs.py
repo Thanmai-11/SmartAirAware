@@ -71,7 +71,10 @@ def build_outputs(
         clock_h = local_hours[h]
         if headcount[h] > 0:
             occupied_hours += 1
-            if settings['comfort_min_c'] <= verify_results[h]['zone_temp_max_c'] <= settings['comfort_max_c']:
+            # Lower-bound check uses zone_temp_min_c (coldest zone must stay above comfort_min),
+            # upper-bound check uses zone_temp_max_c (hottest zone must stay below comfort_max).
+            if (verify_results[h]['zone_temp_min_c'] >= settings['comfort_min_c'] and
+                    verify_results[h]['zone_temp_max_c'] <= settings['comfort_max_c']):
                 comfort_met += 1
             if mode_table[schedule[h]][h]['indoor_pm25'] > settings['pm25_limit']:
                 iaq_violations += 1

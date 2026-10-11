@@ -121,7 +121,9 @@ def ingest_forecast(
                 {
                     "latitude": lat,
                     "longitude": lon,
-                    "hourly": "temperature_2m,relative_humidity_2m,dew_point_2m",
+                    # "dewpoint_2m" is the correct Open-Meteo weather API variable name;
+                    # "dew_point_2m" is only available in the air-quality API.
+                    "hourly": "temperature_2m,relative_humidity_2m,dewpoint_2m",
                     "timezone": "UTC",
                     "forecast_days": 3
                 }
@@ -145,7 +147,7 @@ def ingest_forecast(
         times = w_hourly.get("time", [])
         temps = w_hourly.get("temperature_2m", [])
         rhs = w_hourly.get("relative_humidity_2m", [])
-        dews = w_hourly.get("dew_point_2m", [])
+        dews = w_hourly.get("dewpoint_2m", [])
 
         pm25_map = dict(zip(aq_hourly.get("time", []), aq_hourly.get("pm2_5", [])))
         aqi_map = dict(zip(aq_hourly.get("time", []), aq_hourly.get("us_aqi", [])))

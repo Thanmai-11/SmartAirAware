@@ -106,8 +106,9 @@ def test_optimizer_rules():
 
 def test_action_labels_and_csv_columns(tmp_path):
     schedule = ["Maintain"] * 5 + ["Ventilate"] * 5 + ["Maintain"] * 14
-    verify_results = [{"zone_temp_max_c": 24.5, "kw": 15.0, "kwh": 15.0} for _ in range(24)]
-    maintain_results = [{"zone_temp_max_c": 24.5, "kw": 16.0, "kwh": 16.0} for _ in range(24)]
+    # zone_temp_min_c is required by the comfort KPI check (lower bound uses min temp)
+    verify_results  = [{"zone_temp_max_c": 24.5, "zone_temp_min_c": 23.5, "kw": 15.0, "kwh": 15.0} for _ in range(24)]
+    maintain_results = [{"zone_temp_max_c": 24.5, "zone_temp_min_c": 23.5, "kw": 16.0, "kwh": 16.0} for _ in range(24)]
     mode_table = {m: [{"indoor_pm25": 10.0} for _ in range(24)] for m in MODES.keys()}
     headcount = [100] * 24
     local_hours = list(range(24))

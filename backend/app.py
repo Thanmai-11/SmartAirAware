@@ -1,3 +1,4 @@
+import os
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -22,7 +23,11 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    # allow_credentials=True requires an explicit origin list — wildcards are
+    # rejected by browsers when credentials are included.  Use the env var
+    # CORS_ORIGINS (comma-separated) to supply allowed origins; fall back to
+    # localhost defaults so local development works out of the box.
+    allow_origins=os.getenv("CORS_ORIGINS", "http://localhost:3000,http://localhost:5173").split(","),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

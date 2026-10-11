@@ -59,8 +59,13 @@ def parse_sql(sql_path: str, window_start_date_str: str, start_hour: int = 0):
         
         elec_data = h_data[h_data['ReportDataDictionaryIndex'].isin(hvac_elec_idx)]
         elec_joules = elec_data['Value'].sum()
-        elec_kwh = elec_joules / 3600000.0
-        elec_kw = elec_kwh
+        # EnergyPlus reports Joules per 1-hour interval.
+        # kWh = J / 3,600,000.  For 1-hour intervals kW == kWh numerically,
+        # so both values are derived from the same division — kept separate so
+        # callers that track peak demand (kW) vs. cumulative energy (kWh) remain
+        # semantically correct if interval length ever changes.
+        elec_kwh = elec_joules / 3_600_000.0
+        elec_kw = elec_kwh  # valid for 1-hour EnergyPlus timestep
         
         temp_data = h_data[h_data['ReportDataDictionaryIndex'].isin(zone_temp_idx)]
         if not temp_data.empty:

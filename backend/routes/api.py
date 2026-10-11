@@ -404,6 +404,28 @@ async def upload_energy(
     db.commit()
     return {"message": f"Successfully processed {rows_saved} energy records", "rows_processed": rows_saved}
 
+@router.delete("/runs/failed", response_model=ActionResponse)
+def clear_failed_runs(
+    db: Session = Depends(get_db),
+    authorized: bool = Depends(verify_admin_key)
+):
+    """Delete all runs with status 'failed' and their cascade-deleted child rows."""
+    deleted = db.query(Run).filter(Run.status == "failed").delete(synchronize_session=False)
+    db.commit()
+    return ActionResponse(message=f"Deleted {deleted} failed run(s)", run_id=None, status=None)
+
+
+@router.delete("/runs/all", response_model=ActionResponse)
+def clear_all_runs(
+    db: Session = Depends(get_db),
+    authorized: bool = Depends(verify_admin_key)
+):
+    """Delete ALL run history (failed + successful). Use with care."""
+    deleted = db.query(Run).delete(synchronize_session=False)
+    db.commit()
+    return ActionResponse(message=f"Deleted {deleted} run(s)", run_id=None, status=None)
+
+
 @router.post("/run", response_model=ActionResponse)
 def trigger_run(
     db: Session = Depends(get_db),

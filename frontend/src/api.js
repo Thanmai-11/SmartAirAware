@@ -63,4 +63,6 @@ export const api = {
   putSettings: (key, b)  => request('/api/settings', { method: 'PUT', body: b, adminKey: key }),
   putOccupancy:(key, b)  => request('/api/occupancy', { method: 'PUT', body: b, adminKey: key }),
   runNow:      (key)     => request('/api/run', { method: 'POST', adminKey: key }),
+  clearFailed: (key)     => request('/api/runs/failed', { method: 'DELETE', adminKey: key }),
+  clearAll:    (key)     => request('/api/runs/all',    { method: 'DELETE', adminKey: key }),
 }

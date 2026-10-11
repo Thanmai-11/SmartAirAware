@@ -213,20 +213,12 @@ Admin endpoints require the `X-Admin-Key` header set to the value of `ADMIN_KEY`
 
 ---
 ## Screenshots
+/Users/thanmai/Desktop/1.png
+/Users/thanmai/Desktop/2.png
+/Users/thanmai/Desktop/3.png
+/Users/thanmai/Desktop/4.png
+/Users/thanmai/Desktop/5.png
 
-### Dashboard
-![SmartAirAware dashboard showing KPIs](docs/screenshots/dashboard.png)
-<img width="1253" height="623" alt="Screenshot 2026-10-11 at 8 06 07 PM" src="https://github.com/user-attachments/assets/f2f5fc5b-6335-4a1a-99d8-b9bd02faaafa" />
-<img width="1253" height="623" alt="Screenshot 2026-10-11 at 8 06 01 PM" src="https://github.com/user-attachments/assets/7c3ff534-9a5a-4356-9a11-6cef1979b029" />
-<img width="1253" height="623" alt="Screenshot 2026-10-11 at 8 05 55 PM" src="https://github.com/user-attachments/assets/c3b4c3f3-c3bf-4402-a571-36893c1210c4" />
-<img width="1253" height="623" alt="Screenshot 2026-10-11 at 8 05 49 PM" src="https://github.com/user-attachments/assets/236c02a5-618a-40f3-a381-4fd81a37c64c" />
-<img width="1253" height="623" alt="Screenshot 2026-10-11 at 8 05 43 PM" src="https://github.com/user-attachments/assets/7e51fe9e-bb2f-483e-8034-a9cacc7fb5b0" />
-<img width="1253" height="623" alt="Screenshot 2026-10-11 at 1 34 44 PM" src="https://github.com/user-attachments/assets/a9865426-3487-4a3f-bc39-b61c08dc371a" />
-<img width="1253" height="623" alt="Screenshot 2026-10-11 at 1 34 38 PM" src="https://github.com/user-attachments/assets/be366883-e7c0-495b-aac4-a68afeedc700" />
-
-
-### Hourly schedule
-![Hourly HVAC schedule and forecast](docs/screenshots/schedule.png)
 ## Data sources
 
 - **Weather and air quality:** [Open-Meteo](https://open-meteo.com/) forecast and air-quality APIs, for New Delhi (28.6139° N, 77.2090° E).

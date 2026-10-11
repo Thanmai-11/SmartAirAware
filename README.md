@@ -213,17 +213,11 @@ Admin endpoints require the `X-Admin-Key` header set to the value of `ADMIN_KEY`
 
 ---
 ## Screenshots
-Dashboard KPIs and mode timeline<img width="1253" height="623" alt="1" src="https://github.com/user-attachments/assets/6887f989-a06d-4ff0-9b0e-6d0cb0fb8f64" />
-
-Forecast and schedule<img width="1253" height="623" alt="2" src="https://github.com/user-attachments/assets/1ec035d1-5c15-4c47-a60e-2a3d21fa2174" />
-
-Hourly schedule]<img width="1253" height="623" alt="3" src="https://github.com/user-attachments/assets/afa927be-9d0c-4158-82f7-34594337fed8" />
-
-Optimizer settings<img width="1253" height="623" alt="4" src="https://github.com/user-attachments/assets/df2e8e27-05b8-427b-af7d-5f51287b8f91" />
-
-Occupancy profile<img width="1253" height="623" alt="5" src="https://github.com/user-attachments/assets/b3963fec-4b65-47d1-8a3d-a275eaab504c" />
-
-
+Dashboard KPIs and mode timeline<img width="1253" height="623" alt="1" src="https://github.com/user-attachments/assets/4d28e116-5e3c-45a7-9a0d-65aac89457f8" />
+Forecast and schedule<img width="1253" height="623" alt="2" src="https://github.com/user-attachments/assets/ea0af823-8251-494b-929f-d58e152800c1" />
+Hourly schedule]<img width="1253" height="623" alt="3" src="https://github.com/user-attachments/assets/d80b80f4-0be7-441b-b06b-02fab3b5d270" />
+Optimizer settings<img width="1253" height="623" alt="4" src="https://github.com/user-attachments/assets/542d4e8c-77f2-4933-8d31-ac97f22f3a3d" />
+Occupancy profile<img width="1253" height="623" alt="5" src="https://github.com/user-attachments/assets/f1e4adf2-18f2-4096-94d7-a8c76ad32d78" />
 
 ## Data sources
 

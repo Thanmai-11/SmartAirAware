@@ -213,11 +213,21 @@ Admin endpoints require the `X-Admin-Key` header set to the value of `ADMIN_KEY`
 
 ---
 ## Screenshots
-/Users/thanmai/Desktop/1.png
-/Users/thanmai/Desktop/2.png
-/Users/thanmai/Desktop/3.png
-/Users/thanmai/Desktop/4.png
-/Users/thanmai/Desktop/5.png
+
+### Schedule dashboard: KPIs, expected kW vs indoor PM2.5, and mode timeline
+![Dashboard KPIs and mode timeline](/Users/thanmai/Desktop/1.png)
+
+### 48-hour Delhi forecast and the start of the 24-hour schedule
+![Forecast and schedule](/Users/thanmai/Desktop/2.png)
+
+### Hourly schedule: modes, setpoints, zone temperature and indoor/outdoor PM2.5
+![Hourly schedule](/Users/thanmai/Desktop/3.png)
+
+### Optimizer settings (comfort band, PM2.5 limit, peak window, weights)
+![Optimizer settings](/Users/thanmai/Desktop/4.png)
+
+### Occupancy profile
+![Occupancy profile](/Users/thanmai/Desktop/5.png)
 
 ## Data sources
 

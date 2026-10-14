@@ -219,6 +219,9 @@ Hourly schedule]<img width="1253" height="623" alt="3" src="https://github.com/u
 Optimizer settings<img width="1253" height="623" alt="4" src="https://github.com/user-attachments/assets/542d4e8c-77f2-4933-8d31-ac97f22f3a3d" />
 Occupancy profile<img width="1253" height="623" alt="5" src="https://github.com/user-attachments/assets/f1e4adf2-18f2-4096-94d7-a8c76ad32d78" />
 
+## Deployed on AWS EC2
+Link : http://44.221.138.64/#
+
 ## Data sources
 
 - **Weather and air quality:** [Open-Meteo](https://open-meteo.com/) forecast and air-quality APIs, for New Delhi (28.6139° N, 77.2090° E).
